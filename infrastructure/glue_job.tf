@@ -3,6 +3,6 @@ resource "aws_glue_job" "job_pyspark" {
   role_arn = aws_iam_role.glue_role.arn
 
   command {
-    script_location = "s3://${aws_s3_bucket.dl.bucket}/${aws_s3_bucket_object.job.key}/job_spark_from_tf.py"
+    script_location = "s3://${aws_s3_bucket.dl.bucket}/${aws_s3_bucket_object.job.key}"
   }
 }
