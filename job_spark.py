@@ -14,7 +14,7 @@ enem = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", ";")
-    .load("s3://datalake-pedroteixeira-763282822520/raw-data/enem/")
+    .load("s3://datalake-pedroteixeira-763282822520-producao/raw/")
 )
 
 
@@ -24,5 +24,5 @@ enem = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("year")
-    .save("s3://datalake-pedroteixeira-763282822520/consumer-zone/enem")
+    .save("s3://datalake-pedroteixeira-763282822520-producao/staging/docentes/")
 )

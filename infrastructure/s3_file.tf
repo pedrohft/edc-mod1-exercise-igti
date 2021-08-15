@@ -1,5 +1,5 @@
 
-resource "aws_s3_bucket_object" "docentes_co" {
+resource "aws_s3_bucket_object" "job" {
   bucket = aws_s3_bucket.dl.id
   key    = "glue/pyspark/job_spark_from_tf.py"
   acl    = "private"
